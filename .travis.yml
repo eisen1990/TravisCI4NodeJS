@@ -1,0 +1,18 @@
+# .travis.yml
+env:
+  global:
+    - CI_NAME=travis-ci
+
+matrix:
+  include:
+    - language: node_js
+      sudo: required
+      node_js:
+        - "5"
+      before_script:
+        - cd Platforms/NodeJS-MQTT
+        - npm install mosca --save
+      script:
+        - node broker.js
+        - node client-sub.js
+        - node client-pub.js
