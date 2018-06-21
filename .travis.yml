@@ -9,10 +9,7 @@ matrix:
       sudo: required
       node_js:
         - "5"
-      before_script:
-        - cd Platforms/NodeJS-MQTT
-        - npm install mosca --save
+      #before_script:
+      #  - npm install mosca --save
       script:
-        - node broker.js
-        - node client-sub.js
-        - node client-pub.js
+        - node app.js
