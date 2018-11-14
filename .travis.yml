@@ -9,7 +9,8 @@ matrix:
       sudo: required
       node_js:
         - "5"
-      #before_script:
-      #  - npm install mosca --save
+      before_install:
+        - npm install mocha -g
+        - npm install 
       script:
         - node app.js
