@@ -13,4 +13,5 @@ matrix:
         - npm install mocha -g
         - npm install 
       script:
-        - node app.js
+        - cd myapp
+        - npm start
