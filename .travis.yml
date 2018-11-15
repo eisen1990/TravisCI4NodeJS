@@ -11,7 +11,7 @@ matrix:
         - "5"
       before_install:
         - npm install mocha -g
+        - cd myapp
         - npm install 
       script:
-        - cd myapp
-        - npm start
+        - npm test
